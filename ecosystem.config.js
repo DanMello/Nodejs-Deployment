@@ -21,7 +21,6 @@ module.exports = {
    */
   deploy : {
     production : {
-      // key  : '~/web/nodejs-apps/first-nodejs-app-deployment/ssh/id_rsa_first-nodeapp', // ssh private key in our local machine
       user : 'deploy', 
       host : '172.16.60.129',  // This is a local vmware server
       ref  : 'origin/master',
