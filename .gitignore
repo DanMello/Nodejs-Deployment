@@ -1,2 +1,3 @@
 node_modules/
 ssh/id_rsa_first-nodeapp
+ecosystem.config.js
