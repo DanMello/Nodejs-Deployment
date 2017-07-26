@@ -26,7 +26,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:DanMello/first-nodejs-app-deployment.git',
       path : '/home/deploy/web/nodejs-app-production', 
-      'post-deploy' : 'nvm install && npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'nvm install && npm install && /home/deploy/.nvm/versions/node/v6.11.1/bin/pm2 reload ecosystem.config.js --env production'
     }
   }
 };
