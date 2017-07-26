@@ -22,7 +22,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'deploy', 
-      host : '172.16.60.129',  // This is a local vmware server with an ssh authorized key and no password
+      host : ['172.16.60.129', '172.16.60.131'],  // This is a local vmware server with an ssh authorized key and no password
       ref  : 'origin/master',
       repo : 'git@github.com:DanMello/first-nodejs-app-deployment.git',
       path : '/home/deploy/web/nodejs-app-production', 
@@ -30,6 +30,3 @@ module.exports = {
     }
   }
 };
-
-
-// git@github.com:DanMello/first-nodejs-app-deployment.git
