@@ -17,7 +17,7 @@ case $- in
       *) return;;
 esac
 ```
-### Packages Installed in the deploy user
+### Packages installed in the deploy user
 * [nvm](https://github.com/creationix/nvm) - Used to easily install and manage versions of node-js
 * [pm2](https://github.com/Unitech/pm2) - Used to pull latest from github and deploy to production across all servers
 ### Administrator User
