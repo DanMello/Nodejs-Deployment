@@ -24,3 +24,8 @@ esac
 The administrator users in the two web servers not the nginx server, were used to configure the following
 * **pm2 startup** - If the web servers restarted, the nodejs-app would relaunch as well automatically
 * **/etc/ssh/sshd_config** - Changed to disable password login to the server
+### Considerations 
+Use the full path to pm2 in the ecosystem.config.js file, because if you ever update pm2 you will get an error if you are not using the full path because the location of the global files for your nodejs-app will change
+```
+'post-deploy' : 'nvm install && npm install && /home/deploy/.nvm/versions/node/v6.11.1/bin/pm2 reload ecosystem.config.js --env production'
+```
