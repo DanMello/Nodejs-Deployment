@@ -29,7 +29,7 @@ Use the full path to pm2 in the ecosystem.config.js file, because if you ever up
 ```
 'post-deploy' : 'nvm install && npm install && /home/deploy/.nvm/versions/node/v6.11.1/bin/pm2 reload ecosystem.config.js --env production'
 ```
-Also when scaling and adding more servers make sure they are configured the same and place the new servers first in the array inside the ecosystem.config.js, because when you run pm2 deploy production startup, you'll get an error if runs into a file that has already created the directories. By putting the new servers first you'll be able to create the directories and by the time you get to your current servers you'll still get an error but the directories will at least get created and you'll be ready to move on to pm2 deploy production
+Also when scaling and adding more servers make sure they are configured the same and place the new servers first in the array inside the ecosystem.config.js, because when you run pm2 deploy production startup, you'll get an error if it runs into a server that has already created the directories. By putting the new servers first you'll be able to create the directories and by the time you get to your current servers you'll still get an error but the directories will at least get created and you'll be ready to move on to pm2 deploy production
 ```
 host : ['new-servers-here', '172.16.60.129', '172.16.60.131']
 ``` 
