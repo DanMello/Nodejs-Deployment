@@ -1,4 +1,4 @@
-# first-nodejs-app-deployment
+# Nodejs-Deployment
 ## Configuration
 The web servers contain the following configurations
 ### vmware
